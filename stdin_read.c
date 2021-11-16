@@ -54,14 +54,6 @@ char* read_stdin() {
 			break;
 		}
 
-		printf("\nread_length=[%lu] strlen=[%lu]", read_length, strlen(cursor));
-		if (cursor[read_length-1] == '\n') {
-			printf("\n newline");
-		}
-		if (cursor[read_length] == '\0') {
-			printf("\n end");
-		}
-
 		data_length += read_length;
 		if (data_length < alloc_length) { break; }
 
